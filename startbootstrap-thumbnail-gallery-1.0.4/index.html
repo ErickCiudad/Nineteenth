@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thumbnail Gallery - Start Bootstrap Template</title>
+    <title>Kiara's The Babe</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,17 +28,34 @@
 
 <body>
 <section id="prompt">
-    <form>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
         <label for="password">Enter here</label><br/>
 
         <input id="password" name="password" type="text">
         <input type="submit" name="submit" value="Submit"/>
     </form>
 
-    <script> if(password === 'abc') {document.getElementById('content').style.display = 'block'}
+    <script> function validateForm() {
+        var x = document.forms["myForm"]["password"].value;
+        if (x == null || x == "") {
+            alert("Password must be filled out");
+            return false;
+        }
+        if(x != 'abc') {
+            alert('Password is Incorrect');
+            return false;
+        }
+
+        if (x == 'abc') {
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('prompt').style.display = 'none';
+            return false;
+        }
+    }
     </script>
 
 </section>
+
 
 <section id="content">
     <!-- Navigation -->
@@ -52,19 +69,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#" onclick="document.getElementById('notes').style.display = 'none';
+                        document.getElementById('gallery').style.display = 'block';">Gallery</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a class="navbar-brand" href="#" onclick="document.getElementById('notes').style.display = 'block';
+                        document.getElementById('gallery').style.display = 'none';">Notes</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#"></a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#"></a>
                     </li>
                 </ul>
             </div>
@@ -76,10 +95,22 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
+
+        <div class="row" id="notes">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Thumbnail Gallery</h1>
+                <h1 class="page-header">Notes</h1>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row" id="gallery">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Our Gallery</h1>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -98,8 +129,8 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                <a class="thumbnail" href="#" >
+                    <img class="img-responsive" src="http://placehold.it/400x300"  alt="">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -109,7 +140,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    <img class="img-responsive" src="cats.jpg" alt="">
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -150,7 +181,6 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
         </footer>

@@ -6,6 +6,9 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/hphotos-xpf1/v/t35.0-12/12874541_952646588183351_368584437_o.jpg?oh=f01338033948d36433a01be247dbf69e&oe=56F54C8C");
+    -webkit-animation: fadein 1s;
+
 }
 
 .thumb {
@@ -17,5 +20,25 @@ footer {
 }
 
 #content {
+    /*should be none*/
+    display: none;
+    -webkit-animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.78);
+    color: white;
+}
+
+#gallery{
+    display: block;
+}
+
+#notes{
     display: none;
 }
