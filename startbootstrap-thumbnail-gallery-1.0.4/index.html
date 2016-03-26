@@ -70,7 +70,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#" onclick="document.getElementById('notes').style.display = 'none';
-                        document.getElementById('gallery').style.display = 'block';">Gallery</a>
+                        document.getElementById('gallery').style.display = 'block';
+                        document.getElementById('expandedImage').style.display = 'none';
+
+                        ">Gallery</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -139,7 +142,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
+                <a class="thumbnail" href="#" onclick="expandImage('images/cats.jpg')">
                     <img class="img-responsive" src="images/cats.jpg" alt="">
                 </a>
             </div>
@@ -175,6 +178,10 @@
             </div>
         </div>
 
+        <div id="expandedImage">
+
+        </div>
+
         <hr>
 
         <!-- Footer -->
@@ -194,6 +201,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
 
 </body>
 

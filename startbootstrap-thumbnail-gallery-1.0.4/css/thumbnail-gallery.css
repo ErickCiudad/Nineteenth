@@ -42,3 +42,8 @@ footer {
 #notes{
     display: none;
 }
+
+#expandedImage{
+    display: none;
+
+}
