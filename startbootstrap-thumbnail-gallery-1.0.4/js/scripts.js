@@ -23,3 +23,5 @@ function Pic(src) {
 function ReplacePic() {
     picture.parentNode.removeChild(picture)
 }
+
+$("#zoom_01").elevateZoom();

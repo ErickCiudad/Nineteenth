@@ -6,9 +6,8 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    background-image: url("https://scontent-lax3-1.xx.fbcdn.net/hphotos-xpf1/v/t35.0-12/12874541_952646588183351_368584437_o.jpg?oh=f01338033948d36433a01be247dbf69e&oe=56F54C8C");
+    background-image: url("http://testgarybusey.tk/cats.jpg");
     -webkit-animation: fadein 1s;
-
 }
 
 .thumb {
@@ -43,7 +42,27 @@ footer {
     display: none;
 }
 
-#expandedImage{
+#artwork{
     display: none;
-
 }
+
+.noteWriting{
+    text-align: center;
+    font-size: 200%;
+}
+
+img {position: relative;
+}
+
+img:hover {
+    -webkit-transform: scale(2,2);
+    z-index: 1;
+}
+
+/*to do list*/
+/*<!--&lt;!&ndash;expandable images&ndash;&gt;-->*/
+/*php submission of images*/
+/*install wamp to make php work*/
+/*<!--&lt;!&ndash;find out month and date&ndash;&gt;-->*/
+/*<!--&lt;!&ndash;think of name&ndash;&gt;-->*/
+/*<!--&lt;!&ndash;buy go daddy url&ndash;&gt;-->*/
