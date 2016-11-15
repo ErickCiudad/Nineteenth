@@ -1,2 +1,2 @@
 # Nineteenth
-practice
+fun
